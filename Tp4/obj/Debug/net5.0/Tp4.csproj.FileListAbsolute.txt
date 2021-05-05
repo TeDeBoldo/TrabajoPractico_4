@@ -14,3 +14,19 @@ C:\Users\joaqu\OneDrive\Escritorio\Diseño de Sistemas\Trabajo practico 4\Tp4\ob
 C:\Users\joaqu\OneDrive\Escritorio\Diseño de Sistemas\Trabajo practico 4\Tp4\obj\Debug\net5.0\ref\Tp4.dll
 C:\Users\joaqu\OneDrive\Escritorio\Diseño de Sistemas\Trabajo practico 4\Tp4\obj\Debug\net5.0\Tp4.pdb
 C:\Users\joaqu\OneDrive\Escritorio\Diseño de Sistemas\Trabajo practico 4\Tp4\obj\Debug\net5.0\Tp4.genruntimeconfig.cache
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\bin\Debug\net5.0\Tp4.exe
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\bin\Debug\net5.0\Tp4.deps.json
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\bin\Debug\net5.0\Tp4.runtimeconfig.json
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\bin\Debug\net5.0\Tp4.runtimeconfig.dev.json
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\bin\Debug\net5.0\Tp4.dll
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\bin\Debug\net5.0\ref\Tp4.dll
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\bin\Debug\net5.0\Tp4.pdb
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\obj\Debug\net5.0\Tp4.csprojAssemblyReference.cache
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\obj\Debug\net5.0\Tp4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\obj\Debug\net5.0\Tp4.AssemblyInfoInputs.cache
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\obj\Debug\net5.0\Tp4.AssemblyInfo.cs
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\obj\Debug\net5.0\Tp4.csproj.CoreCompileInputs.cache
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\obj\Debug\net5.0\Tp4.dll
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\obj\Debug\net5.0\ref\Tp4.dll
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\obj\Debug\net5.0\Tp4.pdb
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\obj\Debug\net5.0\Tp4.genruntimeconfig.cache

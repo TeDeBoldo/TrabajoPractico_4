@@ -6,10 +6,10 @@ namespace Tp4
     {
         static void Main(string[] args)
         {
-            int opcion = 0;
-            int s =0;
+            int opcion;
+            int s;
             int eleccion;
-            Persona persona1 = new Persona(42638831, "Joaquin Ficco Girardi", "Rivadavia 740", "03564 613811", "ficco20@gmail.com");
+            Persona persona1 = new Persona(33112244, "Jose Perez", "Calle 574", "03564 445511", "mailprueba@gmail.com");
             Persona persona2 = new Persona(41523214, "Fulanito", "Cordoba 452", "03564 458965", "mail@gmail.com");
             Persona persona3 = new Persona(45236532, "Carlitos", "9 de julio 124", "03564 236585", "mail@hotmail.com");
             
@@ -42,6 +42,7 @@ namespace Tp4
                 switch (opcion)
                 {
                     case 1:
+                        
                         Console.WriteLine("\nIngrese su nombre y apellido");
                         String nombreApellido = Console.ReadLine();
                         Console.WriteLine("\nIngrese su dni");
@@ -55,6 +56,8 @@ namespace Tp4
 
                         Console.WriteLine("\nElija la actividad que realiza");
                         ListaActividadesAutorizadas.MostrarActividadesAutorizadas();
+
+                        s = 0;
                         do
                         {
                             if (s > 0)
@@ -75,6 +78,7 @@ namespace Tp4
                         Console.ReadLine();
 
                         break;
+
                     case 2:
                         Console.WriteLine("\nIngrese el dni");
                         dni = int.Parse(Console.ReadLine());
@@ -121,5 +125,6 @@ namespace Tp4
                 }
             } while (opcion != 0);
         }
+ 
     }
 }
