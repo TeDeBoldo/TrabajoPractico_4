@@ -10,7 +10,6 @@ namespace Tp4
     {
         private PersonaAutorizada[] ListaPersonasAutorizadas = new PersonaAutorizada[10];
         private int numPersonas = 0;
-
         public void AgregarPersonaAutorizada(PersonaAutorizada persona)
         {
             if ( persona != null && numPersonas < ListaPersonasAutorizadas.Length)

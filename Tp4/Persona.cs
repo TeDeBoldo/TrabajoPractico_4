@@ -33,5 +33,13 @@ namespace Tp4
         public void SetTelefono(String telefono) { this.telefono = telefono; }
         public String GetEmail() { return email; }
         public void SetEmail(String email) { this.email = email; }
+        public String MostrarPersona()
+        {
+            return "\nNombre y apellido:" + GetNombreApellido() +
+                "\nDNI:" + GetDni() +
+                "\nDomicilio:" + GetDomicilio() +
+                "\nTelefono:" + GetTelefono() +
+                "\nEmail:" + GetEmail();              
+        }
     }
 }
