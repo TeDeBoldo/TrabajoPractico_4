@@ -21,7 +21,6 @@ C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\bin\Debug\net5.0\Tp4.r
 C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\bin\Debug\net5.0\Tp4.dll
 C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\bin\Debug\net5.0\ref\Tp4.dll
 C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\bin\Debug\net5.0\Tp4.pdb
-C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\obj\Debug\net5.0\Tp4.csprojAssemblyReference.cache
 C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\obj\Debug\net5.0\Tp4.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\obj\Debug\net5.0\Tp4.AssemblyInfoInputs.cache
 C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\obj\Debug\net5.0\Tp4.AssemblyInfo.cs
@@ -30,3 +29,13 @@ C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\obj\Debug\net5.0\Tp4.d
 C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\obj\Debug\net5.0\ref\Tp4.dll
 C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\obj\Debug\net5.0\Tp4.pdb
 C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\obj\Debug\net5.0\Tp4.genruntimeconfig.cache
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\obj\Debug\net5.0\Tp4.csproj.AssemblyReference.cache
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\bin\Debug\net5.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\bin\Debug\net5.0\QRCoder.dll
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\bin\Debug\net5.0\System.Drawing.Common.dll
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\obj\Debug\net5.0\Tp4.csproj.CopyComplete
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Tp4\bin\Debug\net5.0\itextsharp.dll

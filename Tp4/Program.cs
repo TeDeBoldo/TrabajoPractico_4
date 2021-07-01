@@ -1,4 +1,7 @@
 ﻿using System;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 namespace Tp4
 {
@@ -7,8 +10,18 @@ namespace Tp4
         static void Main(string[] args)
         {
             int opcion;
+            int senial = 0;
+            int dni;
+            String domicilio;
+            String email;
+            String telefono;
+            String nombreApellido;
             int s;
             int eleccion;
+            double temperatura;
+            String patente = "";
+            String lugar = "";
+            int vehiculo;
 
             /* Tengo dudas con el planteamiento, lo tome como que cada persona pasaba a ser un empleado y 
              * para su autorizacion utilize la lista de empleados de cada empresa; de esta manera me quedaron al aire las clases PersonaAutorizada y RepositorioPersonasAutorizadas,
@@ -19,9 +32,9 @@ namespace Tp4
              *                            Empresa: Radiocanal -> Cuit: 33224455 / Emleados: dni: 33556644
              *                            Empresa: Segurity -> Cuit: 11553322 / Empleados: dni: 23556622
             */
-            Persona persona1 = new Persona(33112244, "Jose Perez", "Calle 574", "03564 445511", "mailprueba@gmail.com");
+            /*Persona persona1 = new Persona(33112244, "Jose Perez", "Calle 574", "03564 445511", "mailprueba@gmail.com");
             Persona persona2 = new Persona(41523214, "Fulanito", "Cordoba 452", "03564 458965", "mail@gmail.com");
-            Persona persona3 = new Persona(45236532, "Carlitos", "9 de julio 124", "03564 236585", "mail@hotmail.com");
+            Persona persona3 = new Persona(45236532, "Carlitos", "9 de julio 124", "03564 236585", "mail@hotmail.com");*/
 
             Persona persona4 = new Persona(44112233, "Fernando Rodriguez", "9 de julio 124", "03564 236585", "mail@hotmail.com");
             Persona persona5 = new Persona(33556644, "Joaquin Salvio", "Catamarca 632", "03564 556688", "mail@gmail.com");
@@ -35,7 +48,7 @@ namespace Tp4
             ListaActividadesAutorizadas.AgregarActividadautorizada("Periodismo");
             ListaActividadesAutorizadas.AgregarActividadautorizada("Produccion de insumos medicos");
 
-            RepositorioPersonasAutorizadas ListaPersonasAutorizadas = new RepositorioPersonasAutorizadas();
+            /*RepositorioPersonasAutorizadas ListaPersonasAutorizadas = new RepositorioPersonasAutorizadas();
 
             
             PersonaAutorizada personaautorizada1 = new PersonaAutorizada(persona1, ListaActividadesAutorizadas.GetActividad(0));
@@ -43,7 +56,7 @@ namespace Tp4
             PersonaAutorizada personaautorizada2 = new PersonaAutorizada(persona2, ListaActividadesAutorizadas.GetActividad(1));
             ListaPersonasAutorizadas.AgregarPersonaAutorizada(personaautorizada2);
             PersonaAutorizada personaautorizada3 = new PersonaAutorizada(persona3, ListaActividadesAutorizadas.GetActividad(3));
-            ListaPersonasAutorizadas.AgregarPersonaAutorizada(personaautorizada3);
+            ListaPersonasAutorizadas.AgregarPersonaAutorizada(personaautorizada3);*/
 
             RepositorioEmpresas ListaEmpresas = new RepositorioEmpresas();
 
@@ -56,8 +69,8 @@ namespace Tp4
 
 
             DateTime fecha1 = new DateTime(2021, 06, 20);
-            DateTime fecha2 = new DateTime(2021, 06, 7);
-            DateTime fecha3 = new DateTime(2021, 06, 5);
+            DateTime fecha2 = new DateTime(2021, 07, 7);
+            DateTime fecha3 = new DateTime(2021, 07, 10);
             DateTime fecha4 = new DateTime(2021, 07, 5);
 
             Empleado empleado1 = new Empleado(persona4,fecha1);
@@ -70,26 +83,27 @@ namespace Tp4
             empresa2.AgregarEmpleado(empleado2);
             empresa3.AgregarEmpleado(empleado4);
 
+            RepositorioIngresos ListaIngresos = new RepositorioIngresos();
+
             do { 
                 Console.WriteLine("\n¿Que desea hacer?");
-                Console.WriteLine("\nRegistrar persona ----> 1");
-                Console.WriteLine("\nAutorizar persona ----> 2");
-                Console.WriteLine("\nRegistrar empresa ----> 3");
-                Console.WriteLine("\nRegistrar empleado de una empresa ----> 4");
-                Console.WriteLine("\nAutorizar empleado de una empresa ----> 5");
+                Console.WriteLine("\nRegistrar empresa ----> 1");
+                Console.WriteLine("\nRegistrar empleado de una empresa ----> 2");
+                Console.WriteLine("\nGenerar codigo QR ----> 3");
+                Console.WriteLine("\nAutorizar empleado de una empresa ----> 4");
+                Console.WriteLine("\nRegistrar salida ----> 5");
                 Console.WriteLine("\nDar de baja empleado de una empresa ----> 6");
                 Console.WriteLine("\nMostrar empresas registradas ----> 7");
                 Console.WriteLine("\nMostrar empleados de una empresa ----> 8");
                 Console.WriteLine("\nMostrar todas las actividades autorizadas ----> 9");
-                Console.WriteLine("\nMostrar todas las personas autorizadas ----> 10");
                 Console.WriteLine("\nCerrar el programa ---> 0");
 
                 opcion = int.Parse(Console.ReadLine());
 
                 switch (opcion)
                 {
-                    case 1:
-                        
+                    /*case 1: //Registrar persona
+
                         Console.WriteLine("\nIngrese su nombre y apellido");
                         String nombreApellido = Console.ReadLine();
                         Console.WriteLine("\nIngrese su dni");
@@ -126,7 +140,8 @@ namespace Tp4
 
                         break;
 
-                    case 2:
+                    case 2: //Autorizar persona
+
                         Console.WriteLine("\nIngrese el dni");
                         dni = int.Parse(Console.ReadLine());
                         int senial = 0;
@@ -135,8 +150,12 @@ namespace Tp4
                         {
                             if (dni == ListaPersonasAutorizadas.GetPersona(i).GetPersona().GetDni())
                             {
+
+                                
+
                                 Console.WriteLine("\nLa persona esta autorizada a circular");
                                 Console.WriteLine("\n¿Desea ver la informacion de la persona?\nSi --> 1\nNo --> 0");
+
 
                                 if (int.Parse(Console.ReadLine()) == 1)
                                 {
@@ -145,6 +164,8 @@ namespace Tp4
                                 senial = 1;
                                 Console.WriteLine("\nPresiones una tecla para continuar");
                                 Console.ReadLine();
+
+
                             }
                         }
                         if (senial == 0)
@@ -154,8 +175,9 @@ namespace Tp4
                             Console.ReadLine();
                         }
 
-                        break;
-                    case 3:
+                        break;*/
+                    
+                    case 1: //Registrar empresa 
                         Console.WriteLine("\nIngrese la razon social");
                         String razonSocial= Console.ReadLine();
                         Console.WriteLine("\nIngrese el cuit");
@@ -192,7 +214,7 @@ namespace Tp4
 
                         break;
 
-                    case 4:
+                    case 2: //Registrar empleado de una empresa
 
                         Console.WriteLine("\nIngrese el cuit de la empresa");
                         cuit = int.Parse(Console.ReadLine());
@@ -236,8 +258,52 @@ namespace Tp4
                         }
 
                         break;
+                    case 3: //Generar codigo QR de la persona
 
-                    case 5:
+
+                        Console.WriteLine("Ingrese el dni");
+                        dni = int.Parse(Console.ReadLine());
+                        senial = 0;
+
+                        for(int i = 0; i < ListaEmpresas.getNumeroEmpresas(); i++)
+                        {
+                            for(int j = 0; j < ListaEmpresas.GetEmpresa(i).GetNumEmpleados(); j++)
+                            {
+                                if(dni == ListaEmpresas.GetEmpresa(i).GetEmpleado(j).GetPersona().GetDni())
+                                {
+                                    //Se genera un pdf con la imagen del codigo, se debe instalar el paquete iTextScharp
+                                    //Se deberia cambiar la ubicacion de los pdf
+                                    Document doc = new Document(PageSize.A4);
+                                    PdfWriter.GetInstance(doc, new FileStream(@"C:\Users\joaqu\OneDrive\Escritorio\Trabajo practico 4\Codigos QR\"+ "CodigoQr"+ListaEmpresas.GetEmpresa(i).GetEmpleado(j).GetPersona().GetDni(), FileMode.Create));
+                                    doc.Open();
+                                    BarcodeQRCode barcodeQRCode = new BarcodeQRCode(ListaEmpresas.GetEmpresa(i).GetEmpleado(j).GetPersona().MostrarPersona()
+                                        + "\n" + "\nEmpresa para la cual trabaja" + "\n" +
+                                                ListaEmpresas.GetEmpresa(i).MostrarEmpresa(), 500, 500, null);
+                                    Image qrCodeImage = barcodeQRCode.GetImage();
+                                    qrCodeImage.ScaleAbsolute(200, 200);
+                                    doc.Add(qrCodeImage);
+
+                                    doc.Close();
+
+                                    Console.WriteLine("\nEl codigo se ha generado correctamente");
+                                    Console.WriteLine("\nPresiones una tecla para continuar");
+                                    Console.ReadLine();
+                                    senial = 1;
+
+                                }
+                            }
+
+                        }
+                        if (senial == 0)
+                        {
+                            Console.WriteLine("\nNo hay ninguna persona registrada con ese DNI");
+                            Console.WriteLine("\nPresiones una tecla para continuar");
+                            Console.ReadLine();
+                        }
+
+                        break;
+
+                    case 4: //Autorizar empleado de una empresa
 
                         Console.WriteLine("\nIngrese el dni");
                         dni = int.Parse(Console.ReadLine());
@@ -249,18 +315,52 @@ namespace Tp4
                             {
                                 if (dni == ListaEmpresas.GetEmpresa(i).GetEmpleado(j).GetPersona().GetDni() && DateTime.Now < ListaEmpresas.GetEmpresa(i).GetEmpleado(j).GetFecha()) 
                                 {
-                                    Console.WriteLine("\nLa persona esta autorizada a circular");
-                                    senial = 1;
 
-                                    Console.WriteLine("\n¿Desea ver la informacion de la persona?\nSi --> 1\nNo --> 0");
-                                    if (int.Parse(Console.ReadLine()) == 1)
+                                    Console.WriteLine("\n¿Ingresa con vehiculo?\nSi --> 1\nNo --> 0");
+                                    vehiculo = int.Parse(Console.ReadLine());
+                                    if (vehiculo == 1)
                                     {
-                                        Console.WriteLine(ListaEmpresas.GetEmpresa(i).GetEmpleado(j).GetPersona().MostrarPersona()+"\n" + "\nEmpresa para la cual trabaja" + "\n" +
-                                            ListaEmpresas.GetEmpresa(i).MostrarEmpresa());
+                                        Console.WriteLine("\nIngrese la patente del vehiculo");
+                                        patente = Console.ReadLine();
+                                        Console.WriteLine("\n¿A que lugar se dirige?");
+                                        lugar = Console.ReadLine();
                                     }
+                                    Console.WriteLine("\nIngrese la temperatura de la persona");
+                                    temperatura = double.Parse(Console.ReadLine());
+                                    if (temperatura <= 37)
+                                    {
+                                        if (vehiculo == 1)
+                                        {
+                                            Ingreso ingreso = new Ingreso(DateTime.Now, ListaEmpresas.GetEmpresa(i).GetEmpleado(j).GetPersona(), temperatura, patente, lugar);
+                                            ListaIngresos.AgregarIngreso(ingreso);
+                                            Console.WriteLine("\nSe ha registrado el ingreso correctamente");
+                                        }
+                                        else
+                                        {
+                                            Ingreso ingreso = new Ingreso(DateTime.Now, ListaEmpresas.GetEmpresa(i).GetEmpleado(j).GetPersona(), temperatura);
+                                            ListaIngresos.AgregarIngreso(ingreso);
+                                            Console.WriteLine("\nSe ha registrado el ingreso correctamente");
+                                        }
+                                        Console.WriteLine("\n¿Desea ver la informacion de la persona?\nSi --> 1\nNo --> 0");
+                                        if (int.Parse(Console.ReadLine()) == 1)
+                                        {
+                                            Console.WriteLine(ListaEmpresas.GetEmpresa(i).GetEmpleado(j).GetPersona().MostrarPersona() + "\n" + "\nEmpresa para la cual trabaja" + "\n" +
+                                                ListaEmpresas.GetEmpresa(i).MostrarEmpresa());
+                                        }
+                                        senial = 1;
+                                        Console.WriteLine("\nPresiones una tecla para continuar");
+                                        Console.ReadLine();
 
-                                    Console.WriteLine("\nPresiones una tecla para continuar");
-                                    Console.ReadLine();
+
+                                    }
+                                    else
+                                    {
+                                        senial = 1;
+                                        Console.WriteLine("\nLa persona no puede ingresar por temperatura alta");
+                                        Console.WriteLine("\nPresiones una tecla para continuar");
+                                        Console.ReadLine();
+                                    }
+                                    
                                 }
                             }
 
@@ -274,7 +374,38 @@ namespace Tp4
 
                         break;
 
-                    case 6:
+                    case 5: //Registrar salida
+                        senial = 0;
+                        Console.WriteLine("\nIngrese el dni");
+                        dni = int.Parse(Console.ReadLine());
+                        Console.WriteLine(ListaIngresos.GetIngreso(0).GetPersona().GetDni());
+                        for (int i = 0; i < ListaIngresos.GetNumIngresos(); i++)
+                        {
+
+                            if (dni == ListaIngresos.GetIngreso(i).GetPersona().GetDni())
+                            {
+
+                                ListaIngresos.GetIngreso(i).setFechaSalida(DateTime.Now);
+                                Console.WriteLine("\nSe ha registrado la salida correctamente");
+                                senial = 1;
+                                Console.WriteLine("\nPresiones una tecla para continuar");
+                                Console.ReadLine();
+
+                            }
+
+
+                        }
+                        if (senial == 0)
+                        {
+                            Console.WriteLine("\nNo ha ingresado ninguna persona con ese dni");
+                            Console.WriteLine("\nPresiones una tecla para continuar");
+                            Console.ReadLine();
+
+                        }
+
+                        break;
+
+                    case 6:  //Dar de baja empleado de una empresa
 
                         Console.WriteLine("\nIngrese el cuit de la empresa");
                         cuit = int.Parse(Console.ReadLine());
@@ -315,13 +446,13 @@ namespace Tp4
                         }
                         break;
 
-                    case 7:
+                    case 7: //Mostrar empresa registradas
                         ListaEmpresas.MostrarEmpresas();
                         Console.WriteLine("\nPresiones una tecla para continuar");
                         Console.ReadLine();
                         break;
 
-                    case 8:
+                    case 8: //Mostrar empleados de una empresa
 
                         Console.WriteLine("\nIngrese el cuit de la empresa");
                         cuit = int.Parse(Console.ReadLine());
@@ -346,17 +477,17 @@ namespace Tp4
                         }
                         break;
 
-                    case 9:
+                    case 9: //Mostrar actividades autorizadas
                         ListaActividadesAutorizadas.MostrarActividadesAutorizadas();
                         Console.WriteLine("\nPresiones una tecla para continuar");
                         Console.ReadLine();
                         break;
 
-                    case 10:
+                    /*case 11:
                         ListaPersonasAutorizadas.MostrarListaPersonasAutorizadas();
                         Console.WriteLine("\nPresiones una tecla para continuar");
                         Console.ReadLine();
-                        break;
+                        break;*/
 
                     case 0:
 
@@ -365,4 +496,5 @@ namespace Tp4
             } while (opcion != 0);
         }
     }
+    
 }

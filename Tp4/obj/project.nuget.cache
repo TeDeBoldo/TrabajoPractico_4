@@ -1,8 +1,32 @@
 {
   "version": 2,
-  "dgSpecHash": "/y2LePuSD7PtbZ1BWBBBrLI7tpLDIdFXayXUR3EOvV5yUwgt8OrKw6jfHVtZ3pP10CO5aMiJskYu+nODO8uAKA==",
+  "dgSpecHash": "uDWh1/+5dgoRenwdKhgMPCSAsAslDT3RdMU1Ynx9SZ4w7rMERhibdYVTywjUQRkk7ZJxLDX3EcyHc1O5ZUH1+A==",
   "success": true,
   "projectFilePath": "C:\\Users\\joaqu\\OneDrive\\Escritorio\\Trabajo practico 4\\Tp4\\Tp4.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\joaqu\\.nuget\\packages\\bouncycastle\\1.8.6.1\\bouncycastle.1.8.6.1.nupkg.sha512",
+    "C:\\Users\\joaqu\\.nuget\\packages\\itextsharp\\5.5.13.2\\itextsharp.5.5.13.2.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"BouncyCastle 1.8.6.1\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \"net5.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "BouncyCastle",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"iTextSharp 5.5.13.2\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \"net5.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "iTextSharp",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }
